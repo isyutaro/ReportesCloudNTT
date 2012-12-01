@@ -4,7 +4,6 @@ LISTA_SERVIDORES = [
     ]
 
 #correos donde se enviaran los reportes
-correo = 'usuario@dominio.com'
 MAIL_FROM = ''
 MAIL_TO = [
     '',
