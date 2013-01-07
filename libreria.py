@@ -208,8 +208,9 @@ class libreria:
 				reporte[i][11].split('.')[0],
 				reporte[i][12].split('.')[0],
 				reporte[i][13].split('.')[0],
-				trafico[1][i], trafico[0][i],
-				reporte[i][19].split('.')[0]]
+				trafico[1][i],
+				trafico[0][i],
+				reporte[i][20].split('.')[0]]
 			data.append(aux)
 
 		aux = []
