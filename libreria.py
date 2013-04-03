@@ -59,7 +59,7 @@ class libreria:
 		aux = []
 		#Agregamos la lista de servidores filtrada por los que estan Running y agregados en el archivo de configuracion
 		for i in reporte:
-			if (i.split(',')[0] == servidor and i.split(',')[4] == 'Running'):
+			if (i.split(',')[0].replace("\"",'') == servidor and i.split(',')[4] == 'Running'):
 				aux.append(i.split(','))
 
 		return aux
