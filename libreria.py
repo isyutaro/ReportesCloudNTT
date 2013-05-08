@@ -205,12 +205,12 @@ class libreria:
 				reporte[i][8],
 				reporte[i][9],
 				reporte[i][10].split('.')[0],
-				reporte[i][11].split('.')[0],
-				reporte[i][12].split('.')[0],
 				reporte[i][13].split('.')[0],
+				reporte[i][14].split('.')[0],
+				reporte[i][15].split('.')[0],
 				trafico[1][i],
 				trafico[0][i],
-				reporte[i][20].split('.')[0]]
+				reporte[i][24].split('.')[0]]
 			data.append(aux)
 
 		aux = []
@@ -226,10 +226,10 @@ class libreria:
 
 		#se incrementa las hrs de cada servicio
 		for i in reporte:
-			cpuH += int(float(i[11]))
-			RAMH += int(float(i[12]))
-			StorageH += int(float(i[13]))
-			cloudStorageH += int(float(i[20]))
+			cpuH += int(float(i[13]))
+			RAMH += int(float(i[14]))
+			StorageH += int(float(i[15]))
+			cloudStorageH += int(float(i[24]))
 		
 		#Sumatoria del ancho de banda
 		BandWidthHI = (eval('+'.join(trafico[1])))
