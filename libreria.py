@@ -41,9 +41,9 @@ class libreria:
 		primero = Fecha.getPrimerDia(final)
 		START = str(primero.year) + '-' + str("%02d"%primero.month) + '-01'
 		END = str(primero.year) + '-' + str("%02d" % (primero + datetime.timedelta(days=32)).month) + '-01'
-		NTT_URL = NTT_URL.replace('START',START)
-		NTT_URL = NTT_URL.replace('END',END)
-		go(NTT_URL)
+		NTT_URL2 = NTT_URL.replace('START',START)
+		NTT_URL2 = NTT_URL.replace('END',END)
+		go(NTT_URL2)
 		#nos autenticamos
 		fv("1", "userId", NTT_USER)
 		fv("1", "password", NTT_PW)
