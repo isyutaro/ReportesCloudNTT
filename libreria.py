@@ -42,7 +42,7 @@ class libreria:
 		START = str(primero.year) + '-' + str("%02d"%primero.month) + '-01'
 		END = str(primero.year) + '-' + str("%02d" % (primero + datetime.timedelta(days=32)).month) + '-01'
 		NTT_URL2 = NTT_URL.replace('START',START)
-		NTT_URL2 = NTT_URL.replace('END',END)
+		NTT_URL2 = NTT_URL2.replace('END',END)
 		go(NTT_URL2)
 		#nos autenticamos
 		fv("1", "userId", NTT_USER)
