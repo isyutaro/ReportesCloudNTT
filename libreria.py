@@ -35,6 +35,7 @@ class libreria:
 
 	def connectNTT(self):
 		#nos conectamos a la nube NTT obteniendo los detalles del reporte al periodo anterior
+		Fecha = fecha()
 		hoy = Fecha.getNow()
 		final = Fecha.getUltimoDia(hoy)
 		primero = Fecha.getPrimerDia(final)
