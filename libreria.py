@@ -35,6 +35,13 @@ class libreria:
 
 	def connectNTT(self):
 		#nos conectamos a la nube NTT obteniendo los detalles del reporte al periodo anterior
+		hoy = Fecha.getNow()
+		final = Fecha.getUltimoDia(hoy)
+		primero = Fecha.getPrimerDia(final)
+		START = str(primero.year) + '-' + str("%02d"%primero.month) + '-01'
+		END = str(primero.year) + '-' + str("%02d" % (primero + datetime.timedelta(days=32)).month) + '-01'
+		NTT_URL = NTT_URL.replace('START',START)
+		NTT_URL = NTT_URL.replace('END',END)
 		go(NTT_URL)
 		#nos autenticamos
 		fv("1", "userId", NTT_USER)
