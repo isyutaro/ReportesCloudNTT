@@ -303,7 +303,7 @@ class libreria:
 	        msg = MIMEMultipart()
 		msg['From']=MAIL_FROM
 	        msg['Subject']="Reporte Mensual de consumo de trafico en NTT America"
-	        msg['X-Mailer'] = "Python X-Mailer"
+	        #msg['X-Mailer'] = "Python X-Mailer"
         
 	        texto = """
 	        Reporte Mensual de los servidores en NTT America
