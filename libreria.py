@@ -299,11 +299,15 @@ class libreria:
 		doc.build(elements)
 
 	def sendMail(self, validos):
+		#Fecha
+		date = datetime.datetime.utcnow()
+		date = "%s -0000" % date.strftime('%a, %d %b %Y %H:%M:%S')
 		# Creamos objeto Multipart, quien ser� el recipiente que enviaremos
 	        msg = MIMEMultipart()
 		msg['From']=MAIL_FROM
 	        msg['Subject']="Reporte Mensual de consumo de trafico en NTT America"
 	        msg['X-Mailer'] = "Python X-Mailer"
+		msg['Date'] = date
         
 	        texto = """
 	        Reporte Mensual de los servidores en NTT America
