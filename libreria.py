@@ -303,7 +303,7 @@ class libreria:
 	        msg = MIMEMultipart()
 		msg['From']=MAIL_FROM
 	        msg['Subject']="Reporte Mensual de consumo de trafico en NTT America"
-	        #msg['X-Mailer'] = "Python X-Mailer"
+	        msg['X-Mailer'] = "Python X-Mailer"
         
 	        texto = """
 	        Reporte Mensual de los servidores en NTT America
@@ -321,7 +321,7 @@ class libreria:
 		        msg.attach(part)
 		for i in validos:
                         file = (self.path + "csv/" + i + '[' + self.hoy.strftime("%Y-%B") + '].csv')
-                        part = MIMEBase('application', "pdf")
+                        part = MIMEBase('Content-type', "text/csv")
                         part.set_payload(open(file, "rb").read())
                         Encoders.encode_base64(part)
                         part.add_header('Content-Disposition', 'attachment; filename="%s"' % os.path.basename(file))
